@@ -37,7 +37,7 @@ namespace SignalRApi.Controllers
             });
             return Ok("Sosyal Medya Bilgisi Eklendi.");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteSocialMedia(int id)
         {
             var value = _socialMediaService.TGetById(id);

@@ -34,6 +34,7 @@ namespace SignalRWebUI.Controllers
         [HttpPost]
         public async Task< IActionResult> CreateCategory(CreateCategoryDto createCategoryDto)
         {
+			createCategoryDto.Status = true;
 			var client = _httpClientFactory.CreateClient();
 			var jsonData = JsonConvert.SerializeObject(createCategoryDto);
 			StringContent stringContent= new StringContent(jsonData,Encoding.UTF8,"application/json");
