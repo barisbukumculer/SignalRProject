@@ -50,7 +50,7 @@ namespace SignalRApi.Controllers
         {
             _contactService.TUpdate(new Contact()
             {
-                ContactId=updateContactDto.ContactId,
+                ContactId=updateContactDto.ContactID,
                 Phone=updateContactDto.Phone,
                 Mail=updateContactDto.Mail,
                 Location = updateContactDto.Location,
