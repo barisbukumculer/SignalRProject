@@ -1,7 +1,7 @@
 ﻿@model UpdateContactDto
 
 @{
-    ViewData["Title"] = "UpdateContact";
+    ViewData["Title"] = "CreateContact";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
@@ -13,12 +13,12 @@
                 <form method="post">
                     <div class="card">
                         <div class="card-header">
-                            <div class="card-title">İletişim Yazı Güncelleme Sayfası</div>
+                            <div class="card-title">Yeni İletişim Yazı Girişi</div>
                         </div>
-                        <input type="hidden" class="form-control" asp-for="ContactID" >
+                        <input type="hidden" asp-for="ContactID" />
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="Location">Konumu Giriniz</label>
+                                <label for="Location">Lokasyonu Giriniz</label>
                                 <input type="text" class="form-control" asp-for="Location" id="Location">
                             </div>
                         </div>
@@ -30,19 +30,42 @@
                         </div>
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="mail">Mail Adresi Giriniz</label>
-                                <input type="email" class="form-control" asp-for="Mail" id="mail">
+                                <label for="Mail">Mail Adresi Giriniz</label>
+                                <input type="email" class="form-control" asp-for="Mail" id="Mail">
                             </div>
                         </div>
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="Description">Açıklamayı Giriniz</label>
+                                <label for="title">Alt Başlık</label>
+                                <input type="text" class="form-control" asp-for="FooterTitle" id="title">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="OpenDays">Açık Günler</label>
+                                <input type="text" class="form-control" asp-for="OpenDays" id="OpenDays">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="OpenDaysDescription">Açık Günler Açıklama</label>
+                                <input type="text" class="form-control" asp-for="OpenDaysDescription" id="OpenDaysDescription">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="OpenHours">Açık Saatler</label>
+                                <input type="text" class="form-control" asp-for="OpenHours" id="OpenHours">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="Description">Açıklama Giriniz</label>
                                 <textarea rows="5" class="form-control" asp-for="FooterDescription" id="Description"></textarea>
                             </div>
                         </div>
-
                         <div class="card-action">
-                            <button class="btn btn-primary">İletişim Bilgi Yazısını Güncelle</button>
+                            <button class="btn btn-success">İletişim Bilgi Yazısını Güncelle</button>
                         </div>
                     </div>
                 </form>
